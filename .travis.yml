@@ -1,0 +1,9 @@
+language: cpp
+
+notifications:
+  email: false
+
+script:   
+- cmake -H. -B_build
+- cmake --build _build
+- echo "https://www.yandex.ru https://www.google.ru https://mail.ru" | _build/curl
